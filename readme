@@ -1,0 +1,195 @@
+# 🧠 AI Test Case Generator
+
+> Automatically generate high-quality test cases from natural-language requirements using an LLaVA-based local model.
+> Includes real-time CPU/GPU monitoring, structured outputs, and customizable prompt templates.
+
+---
+
+## 🚀 Overview
+
+The **AI Test Case Generator** streamlines the process of converting human-written software requirements into structured test cases.
+It connects to a **local LLaVA model** (via Ollama or API endpoint), generates test cases in batch or parallel mode, and monitors your system’s performance during execution.
+
+---
+
+## ✨ Features
+
+* 🧩 **AI-Powered Generation** — Uses the LLaVA model for intelligent, context-aware test creation.
+* ⚙️ **Batch / Parallel Modes** — Generate multiple test cases at once or concurrently.
+* 📊 **Resource Monitoring** — Tracks CPU, memory, and GPU usage in real time.
+* 🦾 **Structured Output** — Automatically saves generated test cases in the `outputs/` directory.
+* 🧠 **Prompt Customization** — Easily edit prompt templates under the `prompts/` folder.
+* 💜 **Logging** — Logs CPU/GPU stats in `cpu_usage.log` for performance insights.
+
+---
+
+## 🗂️ Folder Structure
+
+```
+project-root/
+├── main.py                  # Entry point for the app
+├── cpu_usage.log            # Logs system performance metrics
+├── config/
+│   ├── settings.py          # Global configuration and model settings
+│   └── logger.py            # Logging setup
+├── core/
+│   ├── model_client.py      # Handles API communication with LLaVA model
+│   ├── system_monitor.py    # Monitors CPU, memory, and GPU
+│   ├── test_case_generator.py
+│   ├── test_case_parser.py
+│   ├── prompt_loader.py
+│   └── utils.py
+├── prompts/                 # Input prompt templates
+├── outputs/                 # Generated test cases
+├── requirements/            # Requirement samples (used as input)
+└── requirements.txt         # Python dependencies
+```
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/ai-test-case-generator.git
+cd ai-test-case-generator
+```
+
+### 2️⃣ Create and Activate a Virtual Environment
+
+```bash
+python -m venv env
+source env/bin/activate        # macOS / Linux
+env\Scripts\activate           # Windows
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🤖 Model Setup (LLaVA via Ollama)
+
+This project assumes you are running **Ollama** locally with the **LLaVA** model.
+
+1. Install [Ollama](https://ollama.ai/download)
+2. Pull the model:
+
+   ```bash
+   ollama pull llava:7b
+   ```
+3. Run Ollama:
+
+   ```bash
+   ollama run llava:7b
+   ```
+4. Ensure your API endpoint matches:
+
+   ```
+   http://localhost:11434/api/generate
+   ```
+
+---
+
+## 🧩 Usage
+
+### Run the main script
+
+```bash
+python main.py
+```
+
+The script will:
+
+* Import a sample `requirement` from `requirements/sample_requirement.py`
+* Start system monitoring
+* Generate test cases
+* Save the results inside the `outputs/` folder
+* Log resource usage to `cpu_usage.log`
+
+---
+
+## 📊 Logs and Monitoring
+
+The system monitor runs in the background and records:
+
+* CPU usage percentage
+* Memory usage
+* GPU stats (if available via `pynvml`)
+
+You can inspect the log with:
+
+```bash
+cat cpu_usage.log
+```
+
+---
+
+## 🧠 Configuration
+
+| Setting         | Description                        | Default                               |
+| --------------- | ---------------------------------- | ------------------------------------- |
+| `MODEL_API_URL` | API endpoint for model requests    | `http://localhost:11434/api/generate` |
+| `MODEL_NAME`    | Model name to use                  | `llava:7b`                            |
+| `USE_STREAM`    | Enable streaming responses         | `True`                                |
+| `OUTPUT_DIR`    | Directory for generated test cases | `./outputs`                           |
+
+Edit these in **`config/settings.py`**.
+
+---
+
+## 🧩 Example Output
+
+Each generated test case file in `outputs/` may include:
+
+```json
+{
+  "id": "testcase_001",
+  "requirement": "User should be able to log in with valid credentials.",
+  "steps": [
+    "Open the login page",
+    "Enter valid username and password",
+    "Click Login",
+    "Verify successful navigation to dashboard"
+  ],
+  "expected_result": "User is logged in successfully."
+}
+```
+
+---
+
+## 🧮 Tech Stack
+
+* **Python 3.10+**
+* **Requests** – API communication
+* **Psutil + Pynvml** – System resource monitoring
+* **LLaVA / Ollama** – AI model for test generation
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to open a PR or raise an issue.
+
+---
+
+## 📄 License
+
+This project is released under the [MIT License](LICENSE).
+
+---
+
+## 👨‍💻 Author
+
+**Your Name**
+🔗 [GitHub](https://github.com/<your-username>)
+💼 [LinkedIn](https://linkedin.com/in/<your-profile>)
+
+---
+
+> ⭐ **If you find this project useful, please consider starring the repo!**
