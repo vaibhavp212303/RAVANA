@@ -1,0 +1,2318 @@
+{
+  "timestamp": "2025-10-29T07:30:18.118930",
+  "version": "v2",
+  "mode": "batch",
+  "response_time_seconds": 174.5,
+  "structured_test_cases": [
+    {
+      "test_cases": [
+        {
+          "test_case": "login_with_valid_credentials",
+          "objective": "To validate the functionality of login with valid credentials.",
+          "preconditions": [],
+          "test_data": {
+            "email": "vaibhav.pawar+sb78@clippd.io",
+            "password": "correctPassword123"
+          },
+          "test_steps": [
+            "Navigate to the login page",
+            "Click on 'Apple' social login option",
+            "Enter valid credentials and click 'Continue'",
+            "Expect the user to be successfully authenticated and redirected to the application homepage."
+          ],
+          "expected_results": "User should be successfully logged in and redirected to the application homepage.",
+          "variations": [],
+          "edge_cases": []
+        },
+        {
+          "test_case": "login_with_invalid_credentials",
+          "objective": "To validate the functionality of login with invalid credentials.",
+          "preconditions": [],
+          "test_data": {
+            "email": "vaibhav.pawar+sb78@clippd.io",
+            "password": "incorrectPassword123"
+          },
+          "test_steps": [
+            "Navigate to the login page",
+            "Click on 'Apple' social login option",
+            "Enter invalid credentials and click 'Continue'",
+            "Expect the user to be logged in unsuccessfully, display an error message."
+          ],
+          "expected_results": "User should not be successfully authenticated and redirected to a login failure page.",
+          "variations": [],
+          "edge_cases": []
+        },
+        {
+          "test_case": "login_with_empty_fields",
+          "objective": "To validate the functionality of login with empty fields.",
+          "preconditions": [],
+          "test_data": {
+            "email": "",
+            "password": ""
+          },
+          "test_steps": [
+            "Navigate to the login page",
+            "Click on 'Email address' field and leave it blank",
+            "Click on 'Password' field and leave it blank",
+            "Click on 'Continue' button",
+            "Expect the user to be redirected to the same page with an error message."
+          ],
+          "expected_results": "User should not be successfully authenticated and redirected to a login failure page.",
+          "variations": [],
+          "edge_cases": []
+        },
+        {
+          "test_case": "login_with_non_email_input",
+          "objective": "To validate the functionality of login with non-email input in the email field.",
+          "preconditions": [],
+          "test_data": {
+            "email": "vaibhav.pawar+sb78@clippd.io123",
+            "password": "correctPassword123"
+          },
+          "test_steps": [
+            "Navigate to the login page",
+            "Click on 'Email address' field and enter a non-email input (e.g., vaibhav.pawar+sb78@clippd.io123)",
+            "Click on 'Password' field and enter valid password",
+            "Click on 'Continue' button",
+            "Expect the user to be redirected to the same page with an error message."
+          ],
+          "expected_results": "User should not be successfully authenticated and redirected to a login failure page.",
+          "variations": [],
+          "edge_cases": []
+        },
+        {
+          "test_case": "login_with_max_length_email",
+          "objective": "To validate the functionality of login with email field reaching the maximum allowed length.",
+          "preconditions": [],
+          "test_data": {
+            "email": "a"
+          },
+          "test_steps": [
+            "Navigate to the login page",
+            "Click on 'Email address' field and enter an email with the maximum allowed length (e.g., a)",
+            "Click on 'Password' field and enter valid password",
+            "Click on 'Continue' button",
+            "Expect the user to be redirected to the same page with an error message."
+          ],
+          "expected_results": "User should not be successfully authenticated and redirected to a login failure page.",
+          "variations": [],
+          "edge_cases": []
+        },
+        {
+          "test_case": "login_with_min_length_email",
+          "objective": "To validate the functionality of login with email field reaching the minimum allowed length.",
+          "preconditions": [],
+          "test_data": {
+            "email": "vaibhav.pawar+sb78@clippd.io",
+            "password": "correctPassword123"
+          },
+          "test_steps": [
+            "Navigate to the login page",
+            "Click on 'Email address' field and enter an email with the minimum allowed length (e.g., vaibhav.pawar+sb78@clippd.io)",
+            "Click on 'Password' field and enter valid password",
+            "Click on 'Continue' button",
+            "Expect the user to be successfully authenticated and redirected to the application homepage."
+          ],
+          "expected_results": "User should be successfully logged in and redirected to the application homepage.",
+          "variations": [],
+          "edge_cases": []
+        },
+        {
+          "test_case": "login_with_invalid_social_login",
+          "objective": "To validate the functionality of login with an invalid social login option.",
+          "preconditions": [],
+          "test_data": {
+            "email": "",
+            "password": ""
+          },
+          "test_steps": [
+            "Navigate to the login page",
+            "Click on 'Email address' field and leave it blank",
+            "Click on a non-existent social login option (e.g., nonExistentProvider)",
+            "Expect the user to be redirected to the same page with an error message."
+          ],
+          "expected_results": "User should not be successfully authenticated and redirected to a login failure page.",
+          "variations": [],
+          "edge_cases": []
+        }
+      ]
+    }
+  ],
+  "system_stats": [
+    {
+      "timestamp": "2025-10-29T07:27:23.199074",
+      "cpu": {
+        "overall_percent": 0.0,
+        "per_core_percent": [
+          60.8,
+          54.0,
+          7.8,
+          3.9,
+          0.0,
+          0.0,
+          38.0,
+          40.0,
+          40.0,
+          38.8
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 5.5,
+        "used": 6.96,
+        "percent": 65.6
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:25.208667",
+      "cpu": {
+        "overall_percent": 26.9,
+        "per_core_percent": [
+          34.7,
+          28.0,
+          8.0,
+          2.0,
+          0.0,
+          0.0,
+          30.0,
+          28.6,
+          24.5,
+          33.3
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.47,
+        "used": 4.92,
+        "percent": 78.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:27.220304",
+      "cpu": {
+        "overall_percent": 99.0,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.68,
+        "used": 5.11,
+        "percent": 77.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:29.227673",
+      "cpu": {
+        "overall_percent": 98.8,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.83,
+        "used": 5.26,
+        "percent": 76.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:31.239740",
+      "cpu": {
+        "overall_percent": 99.4,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.7,
+        "used": 5.48,
+        "percent": 76.8
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:33.252564",
+      "cpu": {
+        "overall_percent": 96.0,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          98.1,
+          98.0,
+          98.0,
+          98.0,
+          98.1,
+          98.1,
+          98.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.32,
+        "used": 5.03,
+        "percent": 79.2
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:35.266166",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          98.0,
+          98.1,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.27,
+        "used": 4.98,
+        "percent": 79.6
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:37.280428",
+      "cpu": {
+        "overall_percent": 99.4,
+        "per_core_percent": [
+          98.1,
+          100.0,
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.65,
+        "used": 4.77,
+        "percent": 77.2
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:39.291445",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.77,
+        "used": 5.04,
+        "percent": 76.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:41.303548",
+      "cpu": {
+        "overall_percent": 100.0,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.83,
+        "used": 5.36,
+        "percent": 76.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:43.307725",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          98.1,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.06,
+        "used": 5.51,
+        "percent": 74.6
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:45.318432",
+      "cpu": {
+        "overall_percent": 99.4,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          98.0,
+          96.1,
+          96.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.27,
+        "used": 5.65,
+        "percent": 73.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:47.327662",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          98.1,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.21,
+        "used": 5.73,
+        "percent": 73.7
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:49.342553",
+      "cpu": {
+        "overall_percent": 99.4,
+        "per_core_percent": [
+          98.1,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.25,
+        "used": 5.69,
+        "percent": 73.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:51.354787",
+      "cpu": {
+        "overall_percent": 100.0,
+        "per_core_percent": [
+          98.0,
+          96.2,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.19,
+        "used": 5.75,
+        "percent": 73.8
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:53.368320",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.09,
+        "used": 5.47,
+        "percent": 74.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:55.380761",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          98.1,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.11,
+        "used": 5.47,
+        "percent": 74.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:57.390470",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.08,
+        "used": 5.51,
+        "percent": 74.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:27:59.405964",
+      "cpu": {
+        "overall_percent": 99.2,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.1,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.09,
+        "used": 5.49,
+        "percent": 74.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:01.419461",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.09,
+        "used": 5.52,
+        "percent": 74.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:03.433040",
+      "cpu": {
+        "overall_percent": 99.0,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.1,
+        "used": 5.51,
+        "percent": 74.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:05.444644",
+      "cpu": {
+        "overall_percent": 100.0,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          98.0,
+          96.1,
+          100.0,
+          100.0,
+          98.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.71,
+        "used": 5.52,
+        "percent": 76.8
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:07.448571",
+      "cpu": {
+        "overall_percent": 99.4,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.36,
+        "used": 5.03,
+        "percent": 79.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:09.455960",
+      "cpu": {
+        "overall_percent": 90.2,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          96.0,
+          98.0,
+          96.1,
+          96.1
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.25,
+        "used": 5.14,
+        "percent": 79.7
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:11.466874",
+      "cpu": {
+        "overall_percent": 99.0,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.76,
+        "used": 5.31,
+        "percent": 76.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:13.472994",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.0,
+        "used": 5.56,
+        "percent": 75.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:15.482079",
+      "cpu": {
+        "overall_percent": 99.2,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.07,
+        "used": 5.54,
+        "percent": 74.6
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:17.493397",
+      "cpu": {
+        "overall_percent": 98.2,
+        "per_core_percent": [
+          96.1,
+          96.1,
+          95.9,
+          96.0,
+          95.9,
+          91.8,
+          100.0,
+          100.0,
+          100.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.15,
+        "used": 5.66,
+        "percent": 74.1
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:19.502041",
+      "cpu": {
+        "overall_percent": 99.0,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          98.1,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.11,
+        "used": 5.7,
+        "percent": 74.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:21.505641",
+      "cpu": {
+        "overall_percent": 97.6,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.05,
+        "used": 5.73,
+        "percent": 74.7
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:23.516090",
+      "cpu": {
+        "overall_percent": 96.8,
+        "per_core_percent": [
+          96.1,
+          100.0,
+          96.2,
+          98.0,
+          96.1,
+          96.1,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.14,
+        "used": 5.65,
+        "percent": 74.1
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:25.530568",
+      "cpu": {
+        "overall_percent": 98.2,
+        "per_core_percent": [
+          100.0,
+          95.9,
+          98.0,
+          98.0,
+          98.0,
+          92.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.11,
+        "used": 5.69,
+        "percent": 74.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:27.537030",
+      "cpu": {
+        "overall_percent": 99.0,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          96.0,
+          96.0,
+          96.1,
+          94.1,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.08,
+        "used": 5.68,
+        "percent": 74.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:29.552238",
+      "cpu": {
+        "overall_percent": 97.2,
+        "per_core_percent": [
+          96.1,
+          96.1,
+          96.0,
+          98.0,
+          98.0,
+          96.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.13,
+        "used": 5.65,
+        "percent": 74.2
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:31.566172",
+      "cpu": {
+        "overall_percent": 98.4,
+        "per_core_percent": [
+          98.1,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.1,
+        "used": 5.69,
+        "percent": 74.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:33.577339",
+      "cpu": {
+        "overall_percent": 97.8,
+        "per_core_percent": [
+          96.1,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          96.1,
+          98.1,
+          98.0,
+          98.0,
+          98.1
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.16,
+        "used": 5.66,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:35.591858",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          87.8,
+          82.0,
+          79.6,
+          79.6,
+          77.6,
+          78.0,
+          98.0,
+          98.0,
+          100.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.78,
+        "used": 5.61,
+        "percent": 76.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:37.600038",
+      "cpu": {
+        "overall_percent": 98.4,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.81,
+        "used": 5.6,
+        "percent": 76.2
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:39.606887",
+      "cpu": {
+        "overall_percent": 97.6,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          98.0,
+          88.2,
+          100.0,
+          100.0,
+          98.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.01,
+        "used": 5.38,
+        "percent": 74.9
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:41.616324",
+      "cpu": {
+        "overall_percent": 98.4,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.03,
+        "used": 5.41,
+        "percent": 74.8
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:43.626983",
+      "cpu": {
+        "overall_percent": 100.0,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.07,
+        "used": 5.42,
+        "percent": 74.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:45.633572",
+      "cpu": {
+        "overall_percent": 97.2,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          94.1,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.08,
+        "used": 5.44,
+        "percent": 74.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:47.649120",
+      "cpu": {
+        "overall_percent": 98.0,
+        "per_core_percent": [
+          96.1,
+          98.0,
+          100.0,
+          98.0,
+          96.2,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.11,
+        "used": 5.44,
+        "percent": 74.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:49.660944",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.07,
+        "used": 5.53,
+        "percent": 74.6
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:51.667094",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          98.0,
+          96.0,
+          96.0,
+          98.0,
+          96.0,
+          92.2,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.01,
+        "used": 5.58,
+        "percent": 74.9
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:53.677353",
+      "cpu": {
+        "overall_percent": 97.4,
+        "per_core_percent": [
+          96.1,
+          100.0,
+          98.0,
+          98.0,
+          98.0,
+          90.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.14,
+        "used": 5.47,
+        "percent": 74.1
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:55.688213",
+      "cpu": {
+        "overall_percent": 97.1,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          96.0,
+          96.0,
+          98.0,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.11,
+        "used": 5.6,
+        "percent": 74.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:57.701073",
+      "cpu": {
+        "overall_percent": 97.8,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          94.1,
+          95.9,
+          92.0,
+          88.2,
+          100.0,
+          100.0,
+          100.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.14,
+        "used": 5.57,
+        "percent": 74.1
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:28:59.709971",
+      "cpu": {
+        "overall_percent": 98.2,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.15,
+        "used": 5.58,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:01.718869",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.17,
+        "used": 5.57,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:03.725804",
+      "cpu": {
+        "overall_percent": 99.8,
+        "per_core_percent": [
+          98.1,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.17,
+        "used": 5.58,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:05.741472",
+      "cpu": {
+        "overall_percent": 99.2,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.17,
+        "used": 5.54,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:07.757138",
+      "cpu": {
+        "overall_percent": 96.8,
+        "per_core_percent": [
+          98.0,
+          96.1,
+          98.0,
+          98.0,
+          98.0,
+          90.0,
+          98.0,
+          98.0,
+          100.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.22,
+        "used": 5.5,
+        "percent": 73.7
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:09.768992",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          96.2,
+          96.1,
+          98.0,
+          96.1,
+          94.2,
+          86.3,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.11,
+        "used": 5.57,
+        "percent": 74.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:11.781197",
+      "cpu": {
+        "overall_percent": 98.2,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          98.0,
+          94.1,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.16,
+        "used": 5.55,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:13.794844",
+      "cpu": {
+        "overall_percent": 98.6,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.16,
+        "used": 5.55,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:15.806896",
+      "cpu": {
+        "overall_percent": 97.2,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          96.0,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.14,
+        "used": 5.57,
+        "percent": 74.2
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:17.811650",
+      "cpu": {
+        "overall_percent": 98.2,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          96.0,
+          96.0,
+          98.0,
+          86.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.16,
+        "used": 5.56,
+        "percent": 74.0
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:19.822592",
+      "cpu": {
+        "overall_percent": 97.2,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          98.0,
+          96.1,
+          98.0,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.19,
+        "used": 5.56,
+        "percent": 73.8
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:21.831210",
+      "cpu": {
+        "overall_percent": 98.6,
+        "per_core_percent": [
+          96.0,
+          98.0,
+          96.1,
+          98.0,
+          90.2,
+          90.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.24,
+        "used": 5.52,
+        "percent": 73.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:23.842190",
+      "cpu": {
+        "overall_percent": 97.0,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          95.9,
+          98.0,
+          96.0,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.25,
+        "used": 5.51,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:25.849677",
+      "cpu": {
+        "overall_percent": 96.6,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          94.1,
+          90.0,
+          100.0,
+          98.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.51,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:27.862247",
+      "cpu": {
+        "overall_percent": 97.4,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          91.8,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.51,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:29.870719",
+      "cpu": {
+        "overall_percent": 98.2,
+        "per_core_percent": [
+          96.0,
+          98.0,
+          96.0,
+          94.1,
+          94.1,
+          82.0,
+          100.0,
+          98.1,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.52,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:31.882263",
+      "cpu": {
+        "overall_percent": 97.6,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          96.1,
+          98.0,
+          98.0,
+          90.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.53,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:33.892563",
+      "cpu": {
+        "overall_percent": 99.0,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          98.0,
+          96.0,
+          98.0,
+          94.1,
+          100.0,
+          100.0,
+          98.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.18,
+        "used": 5.57,
+        "percent": 73.9
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:35.899801",
+      "cpu": {
+        "overall_percent": 98.8,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          95.9,
+          96.1,
+          98.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.18,
+        "used": 5.58,
+        "percent": 73.9
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:37.909775",
+      "cpu": {
+        "overall_percent": 97.8,
+        "per_core_percent": [
+          96.1,
+          96.0,
+          98.0,
+          94.0,
+          96.1,
+          90.0,
+          100.0,
+          100.0,
+          100.0,
+          98.1
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.19,
+        "used": 5.57,
+        "percent": 73.8
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:39.920097",
+      "cpu": {
+        "overall_percent": 97.2,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          100.0,
+          96.1,
+          92.2,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.18,
+        "used": 5.58,
+        "percent": 73.9
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:41.929297",
+      "cpu": {
+        "overall_percent": 97.8,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          98.0,
+          98.1,
+          100.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          98.1
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.24,
+        "used": 5.52,
+        "percent": 73.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:43.936819",
+      "cpu": {
+        "overall_percent": 98.6,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          94.0,
+          96.0,
+          93.9,
+          90.2,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.25,
+        "used": 5.54,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:45.948370",
+      "cpu": {
+        "overall_percent": 96.0,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          100.0,
+          96.1,
+          98.0,
+          92.0,
+          98.1,
+          100.0,
+          98.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.56,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:47.959045",
+      "cpu": {
+        "overall_percent": 97.4,
+        "per_core_percent": [
+          98.0,
+          94.1,
+          96.0,
+          92.2,
+          94.1,
+          93.9,
+          100.0,
+          100.0,
+          100.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.28,
+        "used": 5.56,
+        "percent": 73.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:49.973234",
+      "cpu": {
+        "overall_percent": 98.8,
+        "per_core_percent": [
+          100.0,
+          96.0,
+          96.1,
+          98.0,
+          98.0,
+          89.8,
+          100.0,
+          98.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.28,
+        "used": 5.56,
+        "percent": 73.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:51.984663",
+      "cpu": {
+        "overall_percent": 98.0,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          98.0,
+          96.0,
+          96.1,
+          90.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.57,
+        "percent": 73.4
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:53.992759",
+      "cpu": {
+        "overall_percent": 97.0,
+        "per_core_percent": [
+          98.0,
+          96.1,
+          98.0,
+          98.0,
+          98.0,
+          86.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.58,
+        "percent": 73.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:56.002611",
+      "cpu": {
+        "overall_percent": 98.6,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          96.1,
+          96.1,
+          96.1,
+          92.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.27,
+        "used": 5.57,
+        "percent": 73.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:29:58.016676",
+      "cpu": {
+        "overall_percent": 98.0,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          98.1,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.26,
+        "used": 5.58,
+        "percent": 73.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:00.021145",
+      "cpu": {
+        "overall_percent": 93.0,
+        "per_core_percent": [
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          96.1,
+          94.1,
+          100.0,
+          100.0,
+          98.1,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.2,
+        "used": 5.64,
+        "percent": 73.8
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:02.037007",
+      "cpu": {
+        "overall_percent": 98.2,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          100.0,
+          96.1,
+          94.1,
+          90.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.23,
+        "used": 5.61,
+        "percent": 73.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:04.049617",
+      "cpu": {
+        "overall_percent": 97.6,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          100.0,
+          98.0,
+          96.0,
+          88.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.24,
+        "used": 5.6,
+        "percent": 73.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:06.055828",
+      "cpu": {
+        "overall_percent": 93.6,
+        "per_core_percent": [
+          75.5,
+          63.3,
+          50.0,
+          46.9,
+          42.9,
+          40.8,
+          88.0,
+          86.0,
+          87.8,
+          89.6
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.49,
+        "used": 5.38,
+        "percent": 78.2
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:08.072178",
+      "cpu": {
+        "overall_percent": 98.6,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.79,
+        "used": 5.69,
+        "percent": 76.3
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:10.080767",
+      "cpu": {
+        "overall_percent": 98.8,
+        "per_core_percent": [
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          98.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 3.85,
+        "used": 5.69,
+        "percent": 75.9
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:12.092684",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.08,
+        "used": 5.54,
+        "percent": 74.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:14.097719",
+      "cpu": {
+        "overall_percent": 99.6,
+        "per_core_percent": [
+          100.0,
+          98.0,
+          98.0,
+          96.1,
+          98.0,
+          98.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.09,
+        "used": 5.55,
+        "percent": 74.5
+      },
+      "gpu": null
+    },
+    {
+      "timestamp": "2025-10-29T07:30:16.109306",
+      "cpu": {
+        "overall_percent": 96.8,
+        "per_core_percent": [
+          98.0,
+          98.0,
+          98.0,
+          98.0,
+          96.1,
+          94.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "memory": {
+        "total": 16.0,
+        "available": 4.1,
+        "used": 5.56,
+        "percent": 74.4
+      },
+      "gpu": null
+    }
+  ]
+}
